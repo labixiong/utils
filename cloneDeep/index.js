@@ -8,7 +8,7 @@ function cloneDeep(source) {
   let arrStr = '[object Array]'
   let objToStr = Object.prototype.toString
   // 根据对应的值初始化
-  let result = objToStr.call(item) === objStr ? {} : []
+  let result = objToStr.call(source) === objStr ? {} : []
 
   // 递归
   function recursive(source, result) {
@@ -50,7 +50,6 @@ function cloneDeep(source) {
 //     }
 //   ]
 // }
-
 // const arr = [
 //   [2,3,4],
 //   {
